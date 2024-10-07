@@ -1,52 +1,21 @@
-// - - - PROGRAMMA - - -
+let scelta;
 
-let sceltaBevanda = prompt('Scegli una bevanda: \n 1 - Acqua \n 2 - coca cola \n 3- Birra');
+do{
+    scelta = Number(prompt('Inserisci il numero corrispondente alla bevanda desiderata: 1 - Acqua, 2 - coca cola, 3 - aranciata'));
+    
+    switch (scelta){
+        case 1:
+        console.log(`è stata selezionata l'acqua`);
+        break;
+        case 2:
+        console.log(`è stata selezionata la coca cola`);
+        break;
+        case 3:
+        console.log(`è stata selezionata l'aranciata`);
+        break;
+        default:
+        console.log(`la scelta inserita non è valida, riprova`);
+        
+    }
 
-while (sceltaBevanda != 1 && sceltaBevanda != 2 && sceltaBevanda != 3){
-    
-    sceltaBevanda = prompt('Scegli una bevanda: \n 1 - Acqua \n 2 - coca cola \n 3- Birra');
-    
-}if(sceltaBevanda == 1){
-    
-    console.log('E’ stata selezionata l’acqua');
-    
-}else if(sceltaBevanda == 2){
-    
-    console.log('E’ stata selezionata coca cola');
-    
-}else if(sceltaBevanda == 3){
-    
-    console.log('E’ stata selezionata birra');
-    
-}
-
-
-// - - - PROGRAMMA CORRETTO - - -
-
-let sceltaBevanda = prompt('Scegli una bevanda: \n 1 - acqua \n 2 - coca cola \n 3- birra');
-
-let water = 'acqua'
-
-let coke = 'coca cola'
-
-let beer = 'birra'
-
-while (sceltaBevanda != water && sceltaBevanda != coke && sceltaBevanda != beer){
-    
-    sceltaBevanda = prompt('Scegli una bevanda: \n 1 - acqua \n 2 - coca cola \n 3- birra');
-    
-}switch(sceltaBevanda){
-    
-    case 'acqua':
-    console.log('E’ stata selezionata l’acqua');
-    break;
-    
-    case coke:
-    console.log('E’ stata selezionata coca cola');
-    break;
-    
-    case beer:
-    console.log('E’ stata selezionata birra');
-    break;
-    
-}
+}while(scelta < 1 || scelta > 3)
